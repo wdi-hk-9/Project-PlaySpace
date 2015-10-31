@@ -1,0 +1,23 @@
+<div class="field container">
+  <h1>Sign Up</h1>
+
+  <%= bootstrap_form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+  <%= f.text_field :username %>
+  <%= f.text_field :email %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit", class: "btn btn-success" %>
+</div>
+
+<% end %>
