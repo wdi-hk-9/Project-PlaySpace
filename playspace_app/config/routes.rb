@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  resources :static_pages, only: [:about, :index]
+  get '/playspace', to: 'static_pages#home'
 
-  get 'static_pages/about'
+  get '/playspace/about', to: 'static_pages#about'
 
   root "users#index"
   resources :users, only: [:new, :index, :create]
