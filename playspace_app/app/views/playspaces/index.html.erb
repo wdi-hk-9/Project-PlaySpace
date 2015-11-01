@@ -1,0 +1,42 @@
+<h1><%= @category.name.capitalize %> Playspaces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>District</th>
+      <th>Region</th>
+      <th>Bike Path</th>
+      <th>Merry-Go-Round</th>
+      <th>Play Structure</th>
+      <th>Seesaw</th>
+      <th>Slide</th>
+      <th>Swing</th>
+      <th>Carpark</th>
+      <th>Snack Shop</th>
+      <th>WC</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @playspaces.each do |playspace| %>
+      <tr>
+        <td><%= playspace.name %></td>
+        <td><%= playspace.address %></td>
+        <td><%= playspace.district %></td>
+        <td><%= playspace.region %></td>
+        <td><%= playspace.bike_path %></td>
+        <td><%= playspace.merry_go_round %></td>
+        <td><%= playspace.play_structure %></td>
+        <td><%= playspace.seesaw %></td>
+        <td><%= playspace.slide %></td>
+        <td><%= playspace.swing %></td>
+        <td><%= playspace.carpark %></td>
+        <td><%= playspace.snack_shop %></td>
+        <td><%= playspace.wc %></td>
+        <td><%= link_to 'Show', category_playspace_path(playspace.category_id, playspace) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
