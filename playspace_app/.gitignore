@@ -15,3 +15,4 @@
 app/assets/images/caine_road_playground.jpg
 app/assets/images/hk_park.jpg
 app/assets/images/po_lam_playground.jpg
+app/views/layouts/_if.html.erb
