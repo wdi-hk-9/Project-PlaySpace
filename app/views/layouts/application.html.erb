@@ -12,72 +12,66 @@
 </head>
 
 <body>
-  <%= render 'layouts/header' %>
-  <div id="wrapper">
 
-      <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-          <ul class="sidebar-nav">
+    <div id="wrapper">
 
-            <li class="sidebar-brand">PlaySpace</li>
-            <li><a href="#">Find a PlaySpace</a></li>
-            <li><%= link_to 'About', about_path %></li>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
 
-              <% if current_user %>
+              <li class="sidebar-brand">PlaySpace</li>
+              <li><a href="#">Find a PlaySpace</a></li>
+              <li><%= link_to 'About', about_path %></li>
 
-                <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-              <% else %>
-                <li><%= link_to 'Sign up', new_user_path %></li>
-                <li><%= link_to 'Login', login_path %></li>
+                <% if current_user %>
 
-              <% end %>
+                  <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+                <% else %>
+                  <li><%= link_to 'Sign up', new_user_path %></li>
+                  <li><%= link_to 'Login', login_path %></li>
 
-          </ul>
-      </div>
-      <!-- /#sidebar-wrapper -->
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
+                <% end %>
 
-        <nav class="navbar navbar-default">
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand">PlaySpace</a>
+                <button href="#menu-toggle" id="menu-toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+
+              </div>
+            </div>
+          </nav>
+
           <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand">PlaySpace</a>
-              <button href="#menu-toggle" id="menu-toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-
+            <div class="row">
+              <%= yield %>
             </div>
           </div>
-        </nav>
 
-        <% flash.each do |name, message| %>
-          <div class="flash-message flash-message-<%= name %>">
-            <%= message %>
-          </div>
-        <% end %>
-
-        <div class="container-fluid">
-          <div class="row">
-            <%= yield %>
-          </div>
         </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
 
-      </div>
-      <!-- /#page-content-wrapper -->
-  </div>
-  <!-- /#wrapper -->
-
-  <!-- Menu Toggle Script -->
-  <script>
-  $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-  });
-  </script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 </body>
 </html>
