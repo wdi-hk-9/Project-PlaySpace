@@ -1,23 +1,37 @@
-<div class="field container">
-  <h1>Sign Up</h1>
+<div class="container">
+  <div class="row">
+    <div class="
+      col-xs-12
+      col-sm-8
+      col-md-8 col-md-offset-4
+      col-lg-6 col-lg-offset-6
+      ">
 
-  <%= bootstrap_form_for @user do |f| %>
-    <% if @user.errors.any? %>
-      <div class="error_messages">
-        <h2>Form is invalid</h2>
-        <ul>
-          <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
+
+      <div class="field">
+        <h1>Sign Up</h1>
+
+          <%= bootstrap_form_for @user do |f| %>
+            <% if @user.errors.any? %>
+              <div class="error_messages">
+                <h2>Form is invalid</h2>
+                <ul>
+                  <% for message in @user.errors.full_messages %>
+                  <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
           <% end %>
-        </ul>
-      </div>
-  <% end %>
 
-  <%= f.text_field :username %>
-  <%= f.text_field :email %>
-  <%= f.password_field :password %>
-  <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit", class: "btn btn-success" %>
+          <%= f.text_field :username, icon: "user" %>
+          <%= f.email_field :email, icon: "envelope" %>
+          <%= f.password_field :password, icon: "asterisk" %>
+          <%= f.password_field :password_confirmation, icon: "asterisk" %>
+          <%= f.submit "Submit", class: "btn btn-success" %>
+
+          <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
-<% end %>
