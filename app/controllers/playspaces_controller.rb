@@ -2,21 +2,29 @@ class PlayspacesController < ApplicationController
   before_action :set_category
 
   def index
-    @playspaces = @category.playspaces
+    if @category
+      @playspaces = @category.playspaces
+    else
+      @playspaces = Playspace.all
+    end
   end
 
   def show
-    @playspace = @category.playspaces.find(params[:id])
+    if @category
+      @playspace = @category.playspaces.find(params[:id])
+    else
+      @playspace = Playspace.find(params[:id])
+    end
   end
 
   def new
-    @playspace = @category.playspaces.new
+    @playspace = Playspace.new
   end
 
   def create
-    @playspace = @category.playspaces.new(playspaces_params)
+    @playspace = Playspace.new(playspaces_params)
     if @playspace.save
-      redirect_to category_playspace_path(@playspace.category_id, @playspace.id)
+      redirect_to playspace_path(@playspace.id)
     else
       render :new
     end
@@ -24,7 +32,7 @@ class PlayspacesController < ApplicationController
 
   private
   def set_category
-    @category = Category.find(params[:category_id])
+    @category = Category.find(params[:category_id]) if params[:category_id]
   end
 
   def playspaces_params
