@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   delete 'logout', to: "sessions#destroy"
 
   resources :categories, only: [:index, :show, :new, :create] do
-    resources :playspaces, only: [:index, :show]
+    resources :playspaces, only: [:index]
   end
   resources :playspaces, only: [:index, :show, :new, :create]
 end

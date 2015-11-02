@@ -1,23 +1,30 @@
-<%= form_for([@category, @playspace]) do |f| %>
+<%= form_for(@playspace) do |f| %>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-  <div>
-    <%= f.label :district %>
-    <%= f.text_field :district %>
+    <%= f.label :category_id %>
+    <%= f.select :category_id, [1,2,3,4] %>
   </div>
   <div>
     <%= f.label :region %>
     <%= f.text_field :region %>
   </div>
   <div>
+    <%= f.label :district %>
+    <%= f.text_field :district %>
+  </div>
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div>
+    <%= f.check_box :bike_path %>
+  </div>
+  <div>
     <%= f.submit %>
   </div>
 
 <% end %>
-<!-- checkboxes! -->
+<!-- checkboxes, pull-down menus! -->
