@@ -10,15 +10,12 @@ class PlayspacesController < ApplicationController
   end
 
   def show
-    if @category
-      @playspace = @category.playspaces.find(params[:id])
-    else
-      @playspace = Playspace.find(params[:id])
-    end
+    @playspace = Playspace.find(params[:id])
   end
 
   def new
     @playspace = Playspace.new
+    @categories = Category.all
   end
 
   def create
