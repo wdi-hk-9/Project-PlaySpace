@@ -5,22 +5,59 @@
   </div>
   <div>
     <%= f.label :category_id %>
-    <%= f.select :category_id, [1,2,3,4] %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select') %>
   </div>
   <div>
     <%= f.label :region %>
-    <%= f.text_field :region %>
+    <%= f.select(:region, ["HK", "Kln", "NT"]) %>
   </div>
   <div>
     <%= f.label :district %>
-    <%= f.text_field :district %>
+    <%= f.select(:district, []) %>
+$("#playspace_region").on('change', function() {
+  if ("#playspace_region" = "Kln") {
+    $("#playspace_district").append("<option value='TST'>TST</option>")}})
+
   </div>
   <div>
     <%= f.label :address %>
     <%= f.text_field :address %>
   </div>
   <div>
+    <%= f.label :bike_path %>
     <%= f.check_box :bike_path %>
+  </div>
+  <div>
+    <%= f.label :merry_go_round %>
+    <%= f.check_box :merry_go_round %>
+  </div>
+  <div>
+    <%= f.label :play_structure %>
+    <%= f.check_box :play_structure %>
+  </div>
+  <div>
+    <%= f.label :seesaw %>
+    <%= f.check_box :seesaw %>
+  </div>
+  <div>
+    <%= f.label :slide %>
+    <%= f.check_box :slide %>
+  </div>
+  <div>
+    <%= f.label :swing %>
+    <%= f.check_box :swing %>
+  </div>
+  <div>
+    <%= f.label :carpark %>
+    <%= f.check_box :carpark %>
+  </div>
+  <div>
+    <%= f.label :snack_shop %>
+    <%= f.check_box :snack_shop %>
+  </div>
+  <div>
+    <%= f.label :wc %>
+    <%= f.check_box :wc %>
   </div>
   <div>
     <%= f.submit %>
