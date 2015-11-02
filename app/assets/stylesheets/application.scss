@@ -23,6 +23,7 @@ $font-size-base: 14px;
 
 body {
   font-size: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -30,25 +31,52 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
-@media (max-width: $screen-xs) {
+h5 {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+h6 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+// div.main {
+//   margin: 0 20px;
+// }
+
+@media screen and (max-width: $screen-xs) {
   body {
-    h1 {font-size: floor(($font-size-base * 2.6));}
-    h2 {font-size: floor(($font-size-base * 2.15));}
-    h3 {font-size: floor(($font-size-base * 1.7));}
-    h4 {font-size: floor(($font-size-base * 1.25));}
-    h5 {font-size: floor(($font-size-base * 1));}
-    h6 {font-size: floor(($font-size-base * .75));}
+    h1 {font-size: ($font-size-base * 2.6);}
+    h2 {font-size: ($font-size-base * 2);}
+    h3 {font-size: ($font-size-base * 1.7);}
+    h4 {font-size: ($font-size-base * 1.4);}
+    h5 {font-size: ($font-size-base * 1.4);}
+    h6 {font-size: ($font-size-base * .85);}
+    p {font-size: ($font-size-base * 1);}
   }
 }
 
-@media (max-width: $screen-sm) {
+@media screen and (min-width: $screen-xs) {
   body {
-    h1{font-size: floor(($font-size-base * 1));}
-    h2{font-size: floor(($font-size-base * 2.15));}
-    h3{font-size: floor(($font-size-base * 1.7));}
-    h4{font-size: floor(($font-size-base * 1.25));}
-    h5{font-size: floor(($font-size-base * 1));}
-    h6{font-size: floor(($font-size-base * .75));}
+    h1{font-size: ($font-size-base * 3.4);}
+    h2{font-size: ($font-size-base * 2.4);}
+    h3{font-size: ($font-size-base * 1.85);}
+    h4{font-size: ($font-size-base * 1.4);}
+    h5{font-size: ($font-size-base * 1.4);}
+    h6{font-size: ($font-size-base * .85);}
+    p{font-size: ($font-size-base * 1.15);}
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  body {
+    h1{font-size: ($font-size-base * 4.6);}
+    h2{font-size: ($font-size-base * 2.6);}
+    h3{font-size: ($font-size-base * 2);}
+    h4{font-size: ($font-size-base * 1.7);}
+    h5{font-size: ($font-size-base * 1.7);}
+    h6{font-size: ($font-size-base * 0.9);}
+    p{font-size: ($font-size-base * 1.15);}
   }
 }
 

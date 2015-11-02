@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// CHANGE class="logo" to class="align-center" in header after rebase
 div.logo {
   text-align: center;
 }
@@ -17,12 +18,12 @@ div.static-header {
   margin-bottom: 20px;
 }
 
-span.header.h2 {
+span.header {
   margin-top: 200px
 }
 
 
-div.home-find {
+div.align-center {
   text-align: center;
 }
 
@@ -31,20 +32,11 @@ a.btn-find {
   max-width: 240px;
 }
 
-div.home-or {
-  text-align: center;
-  font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+div.std-margin-top {
   margin-top: 20px;
-}
-
-div.home-sign-log {
-  text-align: center;
 }
 
 a.btn-sign-log {
-  margin-top: 20px;
   width: 100%;
   max-width: 150px;
 }
