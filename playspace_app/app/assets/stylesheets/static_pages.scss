@@ -12,18 +12,15 @@ div.static-header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 400px;
+  height: 500px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-span.header-type {
-  font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  margin-top: 200px;
+span.header.h2 {
+  margin-top: 200px
 }
+
 
 div.home-find {
   text-align: center;
