@@ -1,0 +1,50 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.logo {
+  text-align: center;
+}
+
+div.static-header {
+  background: image-url('caine_road_playground2.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+span.header.h2 {
+  margin-top: 200px
+}
+
+
+div.home-find {
+  text-align: center;
+}
+
+a.btn-find {
+  width: 100%;
+  max-width: 240px;
+}
+
+div.home-or {
+  text-align: center;
+  font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+div.home-sign-log {
+  text-align: center;
+}
+
+a.btn-sign-log {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 150px;
+}

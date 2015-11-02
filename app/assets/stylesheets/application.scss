@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_rails_bootstrap_forms
+ */
+
+@import "variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "static_pages";
+
+$font-size-base: 14px;
+
+body {
+  font-size: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: $screen-xs) {
+  body {
+    h1 {font-size: floor(($font-size-base * 2.6));}
+    h2 {font-size: floor(($font-size-base * 2.15));}
+    h3 {font-size: floor(($font-size-base * 1.7));}
+    h4 {font-size: floor(($font-size-base * 1.25));}
+    h5 {font-size: floor(($font-size-base * 1));}
+    h6 {font-size: floor(($font-size-base * .75));}
+  }
+}
+
+@media (max-width: $screen-sm) {
+  body {
+    h1{font-size: floor(($font-size-base * 1));}
+    h2{font-size: floor(($font-size-base * 2.15));}
+    h3{font-size: floor(($font-size-base * 1.7));}
+    h4{font-size: floor(($font-size-base * 1.25));}
+    h5{font-size: floor(($font-size-base * 1));}
+    h6{font-size: floor(($font-size-base * .75));}
+  }
+}
+
+.white {
+  color: white;
+}

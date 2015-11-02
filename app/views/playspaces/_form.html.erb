@@ -1,0 +1,23 @@
+<%= form_for([@category, @playspace]) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div>
+    <%= f.label :district %>
+    <%= f.text_field :district %>
+  </div>
+  <div>
+    <%= f.label :region %>
+    <%= f.text_field :region %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>
+<!-- checkboxes! -->

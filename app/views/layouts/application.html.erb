@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlayspaceApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Custom CSS -->
+  <link href="stylesheets/sidebar.scss" rel="stylesheet">
+
+</head>
+
+<body>
+  <%= render 'layouts/header' %>
+  <div id="wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+
+            <li class="sidebar-brand">PlaySpace</li>
+            <li><a href="#">Find a PlaySpace</a></li>
+            <li><%= link_to 'About', about_path %></li>
+
+              <% if current_user %>
+
+                <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+              <% else %>
+                <li><%= link_to 'Sign up', new_user_path %></li>
+                <li><%= link_to 'Login', login_path %></li>
+
+              <% end %>
+
+          </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand">PlaySpace</a>
+              <button href="#menu-toggle" id="menu-toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+
+            </div>
+          </div>
+        </nav>
+
+        <% flash.each do |name, message| %>
+          <div class="flash-message flash-message-<%= name %>">
+            <%= message %>
+          </div>
+        <% end %>
+
+        <div class="container-fluid">
+          <div class="row">
+            <%= yield %>
+          </div>
+        </div>
+
+      </div>
+      <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Menu Toggle Script -->
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+
+</body>
+</html>
