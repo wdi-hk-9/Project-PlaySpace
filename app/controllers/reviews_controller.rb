@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
   #index
   def index
     @reviews = @playspace.reviews
+    @review = @playspace.reviews.new
   end
 
   #new
