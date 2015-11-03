@@ -1,12 +1,11 @@
 <div class="row top-margin" id="reviews-index">
   <div class="col-xs-12 col-sm-10 col-md-8">
+    <%= link_to 'Back', playspace_path(@playspace.id), class: "btn btn-default" %>
 
     <div class="col-xs-8">
       <div><strong><%= @playspace.name.titleize %></strong></div>
       <div class="bottom-margin"><em><%= @playspace.district.titleize %>, <%= @playspace.region %></em></div>
-    </div>
-    <div class="col-xs-4">
-      <%= link_to 'Back', playspace_path(@playspace.id), class: "btn btn-default" %>
+      <div>Address: <%= @playspace.address.titleize %></div>
     </div>
 
     <div class="col-xs-12">
