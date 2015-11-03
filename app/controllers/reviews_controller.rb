@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   #index
   def index
     @reviews = @playspace.reviews
-    @review = @playspace.reviews.new
+    @review  = @playspace.reviews.new
   end
 
   #new
@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   #create
   def create
     @review = @playspace.reviews.new(reviews_params)
+    @review.user = current_user
     if @review.save
       redirect_to playspace_reviews_path(@playspace.id)
     else
@@ -43,7 +44,7 @@ class ReviewsController < ApplicationController
   end
 
   def reviews_params
-    params.require(:reviews).permit(:comment)
+    params.require(:review).permit(:comment)
   end
 
 end
