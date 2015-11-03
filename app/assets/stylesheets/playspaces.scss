@@ -19,8 +19,16 @@
 
 // #show
 #playspaces-show {
-  span.playspace-features {
-    display: inline;
+  div.bottom-margin {
+    margin-bottom: 10px;
+  }
+
+  div.features {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  span.features-list {
     font-size: 12px;
   }
 }

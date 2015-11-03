@@ -1,0 +1,33 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// #index
+#reviews-index {
+  div.bottom-margin {
+    margin-bottom: 10px;
+  }
+
+  div.features {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  span.features-list {
+    font-size: 12px;
+  }
+
+  ul.reviews {
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #D8D8D8;
+  }
+
+  li.comment {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #D8D8D8;
+  padding-top: 10px;
+  }
+
+}

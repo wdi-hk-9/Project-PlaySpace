@@ -1,19 +1,21 @@
-<div class="top-margin" id="playspaces-show">
+<div class="container top-margin" id="playspaces-show">
 
-  <div class="playspace-name"><%= @playspace.name.titleize %></div>
-  <div class="playspace-district"><em><%= @playspace.district.titleize %>, <%= @playspace.region %></em></div>
-  <div class="playspace-address"><%= @playspace.address.titleize %></div>
+  <div class="row">
+    <div class="col-xs-8">
+      <div><strong><%= @playspace.name.titleize %></strong></div>
+      <div class="bottom-margin"><em><%= @playspace.district.titleize %>, <%= @playspace.region %></em></div>
+      <div>Address: <%= @playspace.address.titleize %></div>
+    </div>
+    <div class="col-xs-4">
+      <%= link_to 'Reviews', playspace_reviews_path(@playspace.id), class: "btn btn-default" %>
+    </div>
+  </div>
 
-  <h6>Features:</h6>
-    <span class="playspace-features">
-      <% @features = ["bike_path", "merry_go_round", "play_structure", "seesaw", "slide", "swing", "carpark", "snack_shop" "wc"] %>
-      <% @array = [] %>
-      <% @features.each do |feature| %>
-        <% if @playspace[feature] %>
-          <% @array.push(feature.titleize) %>
-        <% end %>
-      <% end %>
-      <%= @array.to_sentence %>
-    </span>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 features">
+      <h6>Features</h6>
+      <span class="features-list"><%= features_list(@playspace) %></span>
+    </div>
+  </div>
 
 </div>
