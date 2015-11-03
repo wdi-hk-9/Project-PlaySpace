@@ -38,12 +38,36 @@ h6 {
   font-weight: bold;
 }
 
+.no-margin {
+  margin: 0 !important;
+}
+
 .top-margin {
   margin-top: 50px;
 }
-// div.main {
-//   margin: 0 20px;
-// }
+
+#logo > a > img {
+  height: 50px;
+  width: auto;
+  margin-top: 8px;
+}
+
+#menu-toggle {
+  margin-top: 10px;
+}
+
+#menu-toggle2 {
+  font-size: 18px;
+  padding: 4px 12px;
+  margin-top: 10px;
+}
+
+#menu-toggle3 {
+  font-size: 18px;
+  padding: 4px 12px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
 
 @media screen and (max-width: $screen-xs) {
   body {
