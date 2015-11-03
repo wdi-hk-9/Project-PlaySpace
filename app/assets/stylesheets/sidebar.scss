@@ -33,7 +33,22 @@
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled #sidebar-wrapper {
+#sidebar-wrapper-right {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #d8d8d8;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper, #wrapper.toggled-right #sidebar-wrapper-right {
     width: 250px;
 }
 

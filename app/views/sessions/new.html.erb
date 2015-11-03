@@ -1,10 +1,9 @@
-<div class="field container top-margin">
+<div class="col-xs-12 field container top-margin" id="sessions-new">
   <h1>Login</h1>
 
-<%= bootstrap_form_tag url: '/sessions' do |f| %>
-  <%= f.email_field :email %>
-  <%= f.password_field :password %>
-  <%= f.submit "Log In", class: "btn btn-success" %>
+  <%= bootstrap_form_tag url: '/sessions' do |f| %>
+    <%= f.email_field :email, {icon: "envelope", class: "form-control"} %>
+    <%= f.password_field :password, {icon: "asterisk", class: "form-control"}  %>
+    <%= f.submit "Log In", class: "btn btn-success btn-block no-margin" %>
+  <% end %>
 </div>
-
-<% end %>
