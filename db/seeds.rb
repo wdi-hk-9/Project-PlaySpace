@@ -14,10 +14,7 @@ categories.each do |category|
   Category.create(name: category)
 end
 
-
 Playspace.delete_all
-
-name, address, district, region, bike_path, merry_go_round, play_structure, seesaw, slide, swing, carpark, snack_shop, wc, category_id
 
 playspace_list = [
   ["Hong Kong Park", "19 Cotton Tree Drive", "Central", "HK", nil, nil, true, nil, true, nil, true, true, true, 2],
