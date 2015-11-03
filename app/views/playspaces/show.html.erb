@@ -1,3 +1,19 @@
-<h1>Playspace</h1>
+<div class="top-margin" id="playspaces-show">
 
-<h2><%= @playspace.name.titleize %></h2>
+  <div class="playspace-name"><%= @playspace.name.titleize %></div>
+  <div class="playspace-district"><em><%= @playspace.district.titleize %>, <%= @playspace.region %></em></div>
+  <div class="playspace-address"><%= @playspace.address.titleize %></div>
+
+  <h6>Features:</h6>
+    <span class="playspace-features">
+      <% @features = ["bike_path", "merry_go_round", "play_structure", "seesaw", "slide", "swing", "carpark", "snack_shop" "wc"] %>
+      <% @array = [] %>
+      <% @features.each do |feature| %>
+        <% if @playspace[feature] %>
+          <% @array.push(feature.titleize) %>
+        <% end %>
+      <% end %>
+      <%= @array.to_sentence %>
+    </span>
+
+</div>
