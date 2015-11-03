@@ -1,1 +1,17 @@
-<h1>All reviews</h1>
+<div class="row top-margin" id="reviews-index">
+  <div class="col-xs-12 col-sm-10 col-md-8">
+    <div class="col-xs-8">
+      <%= @playspace.name.titleize %>
+      <br>
+      <%= @playspace.district.titleize %>, <%= @playspace.region.titleize %>
+    </div>
+    <div class="col-xs-4">
+      <%= link_to 'Back', playspace_path(@playspace.id), class: "btn btn-default" %>
+    </div>
+
+  <% @playspace.reviews.each do |review| %>
+    <p>"<%= review.comment %>" ~ <em><%= review.user.username %></em></p>
+  <% end %>
+
+  </div>
+</div>
