@@ -1,3 +1,18 @@
 // Place all the styles related to the playspaces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// #index
+#playspaces-index {
+  li.add-padding {
+    padding: 0 10px 15px 0;
+  }
+
+  span.name {
+    font-size: 13px;
+  }
+
+  span.district {
+    font-size: 12px;
+  }
+}
