@@ -38,6 +38,13 @@ h6 {
   font-weight: bold;
 }
 
+.top-margin {
+  margin-top: 50px;
+}
+// div.main {
+//   margin: 0 20px;
+// }
+
 @media screen and (max-width: $screen-xs) {
   body {
     h1 {font-size: ($font-size-base * 2.6);}
