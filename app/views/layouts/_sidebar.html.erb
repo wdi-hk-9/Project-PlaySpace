@@ -1,0 +1,26 @@
+<!-- Sidebar left -->
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">PlaySpace</li>
+    <li><a href="#">Find a PlaySpace</a></li>
+    <li><%= link_to 'About', about_path %></li>
+
+      <% if current_user %>
+        <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+        <li><%= link_to 'Add a Playspace', new_playspace_path %></li>
+      <% else %>
+        <li><%= link_to 'Sign up', new_user_path %></li>
+        <li><%= link_to 'Login', login_path %></li>
+      <% end %>
+  </ul>
+</div>
+<!-- /#sidebar-wrapper left-->
+
+<!-- Sidebar right -->
+<div id="sidebar-wrapper-right" class="hide">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">PlaySpace</li>
+    <li><a href="#">Search</a></li>
+  </ul>
+</div>
+<!-- /#sidebar-wrapper right-->
