@@ -2,13 +2,14 @@
   <div class="col-xs-12 col-sm-10 col-md-8">
 
     <%= bootstrap_form_for(@playspace) do |f| %>
+      <div>
         <%= f.text_field :name %>
       </div>
       <div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select') %>
       </div>
       <div>
-        <%= f.select(:region, ["HK", "Kln", "NT"]) %>
+        <%= f.select(:region, ["", "HK", "Kln", "NT"]) %>
       </div>
       <div>
         <%= f.select(:district, []) %>
@@ -20,7 +21,7 @@
         <%= f.check_box :bike_path %>
       </div>
       <div>
-        <%= f.check_box :merry_go_round %>
+        <%= f.check_box :merry_go_round, label: "Merry-go-round" %>
       </div>
       <div>
         <%= f.check_box :play_structure %>
@@ -41,7 +42,7 @@
         <%= f.check_box :snack_shop %>
       </div>
       <div>
-        <%= f.check_box :wc %>
+        <%= f.check_box :wc, label: "WC" %>
       </div>
       <div>
         <%= f.submit %>
