@@ -12,30 +12,24 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-//= require jquery
 //= require bootstrap
+//= require_tree .
 
-//Menu Toggle Script
+// Menu Toggle Script
+// always on
 $(document).ready(function() {
-  if (window.location.pathname == "/"){
-    $("#sidebar-wrapper-right").removeClass("hide");
-    $("#menu-toggle2").removeClass("hide");
-    $("#menu-toggle3").removeClass("hide");
-  }
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
 
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
+  $("#menu-toggle2").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled-right");
+  });
 
-    $("#menu-toggle2").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled-right");
-    });
-
-    $("#menu-toggle3").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled-right");
-    });
+  $("#menu-toggle3").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled-right");
+  });
 });
