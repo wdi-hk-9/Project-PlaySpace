@@ -20,11 +20,15 @@
 // #show
 #playspaces-show {
   div.bottom-margin {
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
 
-  span.playspace-features {
-    display: inline;
+  div.features {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  span.features-list {
     font-size: 12px;
   }
 }
