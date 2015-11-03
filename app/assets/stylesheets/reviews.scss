@@ -4,8 +4,30 @@
 
 // #index
 #reviews-index {
-    div.bottom-margin {
-    margin-bottom: 10px
+  div.bottom-margin {
+    margin-bottom: 10px;
+  }
+
+  div.features {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  span.features-list {
+    font-size: 12px;
+  }
+
+  ul.reviews {
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #D8D8D8;
+  }
+
+  li.review {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #D8D8D8;
+  padding-top: 10px;
   }
 
 }
