@@ -19,14 +19,22 @@
   </div>
 
   <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 features">
+
+    <%= render 'form' %>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-xs-12">
       <ul class="list-unstyled reviews">
         <% @playspace.reviews.reverse_each do |review| %>
-          <li class="review"><p>"<%= review.comment %>" ~ <em><%= review.user.username %></em></p></li>
+          <li class="comment"><p>"<%= review.comment %>" ~ <em><%= review.user.username %></em></p></li>
         <% end %>
       </ul>
     </div>
   </div>
+
     <!-- form -->
     <!-- check if current_user is not nil -->
     <!--   display the text box -->
