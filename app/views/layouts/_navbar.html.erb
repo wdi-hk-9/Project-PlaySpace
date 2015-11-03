@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button href="#menu-toggle2" id="menu-toggle2" type="button" class="navbar-toggle collapsed pull-right" aria-expanded="false" class="hide">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+      <button href="#menu-toggle" id="menu-toggle" type="button" class="navbar-toggle collapsed pull-left" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="logo">
+        <%= link_to image_tag("playspace_logo.png"), root_path %>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button href="#menu-toggle3" id="menu-toggle3" type="button" aria-expanded="false" class="hide">
+            <span class="sr-only">Toggle Search</span>
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

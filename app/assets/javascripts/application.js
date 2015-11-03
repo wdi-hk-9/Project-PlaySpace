@@ -12,7 +12,24 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-//= require jquery
 //= require bootstrap
+//= require_tree .
+
+// Menu Toggle Script
+// always on
+$(document).ready(function() {
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+
+  $("#menu-toggle2").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled-right");
+  });
+
+  $("#menu-toggle3").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled-right");
+  });
+});
