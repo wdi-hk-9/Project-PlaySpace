@@ -8,7 +8,7 @@
 
 Category.delete_all
 
-categories = ["beach", "park", "playground"]
+%w(beach park playground).each {|category| Category.create name: category }
 
 categories.each do |category|
   Category.create(name: category)
@@ -16,35 +16,271 @@ end
 
 Playspace.delete_all
 
-playspace_list = [
-  ["Hong Kong Park", "19 Cotton Tree Drive", "Central", "HK", nil, nil, true, nil, true, nil, true, true, true, 2],
-  ["Mount Austin Playground", "Mount Austin Road", "The Peak", "HK", nil, nil, true, nil, true, true, nil, nil, true, 3],
-  ["Sai On Lane Playground", "Sai On Lane", "Sai Wan", "HK", nil, nil, true, nil, true, nil, nil, nil, nil, 3],
-  ["Victoria Park", "1 Hing Fat Street", "Causeway Bay", "Hong Kong", nil, nil, true, nil, true, true, true, true, true, 2],
-  ["Quarry Bay Park", "Taikoo Shing", "Taikoo Shing", "HK", nil, nil, true, true, true, true, nil, nil, true, 3],
-  ["Ap Lei Chau Park", "Ap Lei Chau Main Street", "Aberdeen", "HK", nil, nil, true, nil, true, true, nil, nil, true, 3],
-  ["Repulse Bay Beach", "16 Beach Road", "Repulse Bay", "HK", nil, true, true, true, true, nil, true, true, true, 1],
-  ["Wan Chai Park", "Cross Lane", "Wan Chai", "HK", nil, nil, true, true, true, nil, nil, nil, nil, 3],
-  ["Ho Man Tin Park", "1 Chung Yee Street", "Ho Man Tin", "Kln", nil, nil, true, true, true, nil, nil, nil, nil, 3],
-  ["To Kwa Wan Recreation Ground", "66 Ha Heung Road", "To Kwa Wan", "Kln", nil, nil, true, nil, true, true, nil, nil, nil, 3],
-  ["Yuet Wah Street Playground", "Yuet Wah Street", "Kwun Tong", "Kln", nil, nil, true, nil, true, nil, nil, nil, nil, 3]
-]
+# ** Template for new playspace. NB: use lowercase **
+# Playspace.create(name: "",
+#   address: "",
+#   district: "",
+#   region: "",
+#   bike_path: ,
+#   merry_go_round: ,
+#   play_structure: ,
+#   seesaw: ,
+#   slide: ,
+#   swing: ,
+#   carpark: ,
+#   snack_shop: ,
+#   wc: ,
+#   category_id: Category.find_by name: ""
+# )
 
-playspace_list.each do |name, address, district, region, bike_path, merry_go_round, play_structure, seesaw, slide, swing, carpark, snack_shop, wc, category_id|
-  Playspace.create(name: name, address: address, district: district, region: region, bike_path: bike_path, merry_go_round:merry_go_round, play_structure: play_structure, seesaw: seesaw, slide: slide, swing: swing, carpark: carpark, snack_shop: snack_shop, wc: wc, category_id: category_id)
-end
+Playspace.create(name: "hong kong park",
+  address: "19 cotton tree drive",
+  district: "central",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: true,
+  snack_shop: true,
+  wc: true,
+  category_id: Category.find_by name: "park"
+)
+
+Playspace.create(name: "mount austin playground",
+  address: "mount austin road",
+  district: "the peak",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: true,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "sai on lane playground",
+  address: "sai on lane",
+  district: "sai wan",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "victoria park",
+  address: "1 hing fat street",
+  district: "causeway bay",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: true,
+  snack_shop: true,
+  wc: true,
+  category_id: Category.find_by name: "park"
+)
+
+Playspace.create(name: "quarry bay park",
+  address: "taikoo shing",
+  district: "quarry bay",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: true,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: true,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "ap lei chau park",
+  address: "ap lei chau main street",
+  district: "aberdeen",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: true,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "repulse bay beach",
+  address: "16 beach road",
+  district: "repulse bay",
+  region: "hk",
+  bike_path: true,
+  merry_go_round: true,
+  play_structure: true,
+  seesaw: true,
+  slide: true,
+  swing: nil,
+  carpark: true,
+  snack_shop: true,
+  wc: true,
+  category_id: Category.find_by name: "beach"
+)
+
+Playspace.create(name: "wan chai park",
+  address: "cross lane",
+  district: "wan chai",
+  region: "hk",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: true,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "ho man tin park",
+  address: "1 chung yee street",
+  district: "ho man tin",
+  region: "kln",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: true,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "to kwa wan recreation ground",
+  address: "66 ha heung road",
+  district: "to kwa wan",
+  region: "kln",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category_id: Category.find_by name: "playground"
+)
+
+Playspace.create(name: "yuet wah street playground",
+  address: "yuet wah street",
+  district: "kwun tong",
+  region: "kln",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category_id: Category.find_by name: "playground"
+)
+
+User.delete_all
+
+# ** Template for new user. NB: use lowercase)
+# User.create(email: "",
+#   username: ""
+#   )
+
+User.create(email: "ada@ada.com",
+  username: "ada"
+  )
+
+User.create(email: "pip@pip.com",
+  username: "pip"
+  )
+
+User.create(email: "anna@anna.com",
+  username: "anna"
+  )
+
+User.create(email: "bob@bob.com",
+  username: "bob"
+  )
+
+User.create(email: "cate@cate.com",
+  username: "cate"
+  )
+
+User.create(email: "doug@doug.com",
+  username: "doug"
+  )
+
+User.create(email: "ed@ed.com",
+  username: "ed"
+  )
 
 Review.delete_all
 
-review_list = [
-  ["This playground is awesome.", 2, 16],
-  ["So much to do here.", 1, 16],
-  ["One of the nicest parks in Hong Kong. Lots of open space to run around.", 2, 17],
-  ["We came here for the first time last week and the kids had a great time.", 1, 17],
-  ["This beach is fantastic.", 2, 22],
-  ["Beware of the dodgy men. STAY AWAY!", 2, 23]
-]
+# ** Template for new review. NB: use lowercase **
+# Review.create(comment: "",
+#   user_id: User.find_by username: "",
+#   playspace_id: Playspace.find_by name: "",
+#   rating:
+#   )
 
-review_list.each do |comment, user_id, playspace_id|
-  Review.create(comment: comment, user_id: user_id, playspace_id: playspace_id)
-end
+Review.delete_all
+
+Review.create(comment: "This playground is awesome!",
+  user_id: User.find_by username: "ada",
+  playspace_id: Playspace.find_by name: "hong kong park",
+  rating: 5
+  )
+
+Review.create(comment: "One of the nicest parks in Hong Kong. Lots of open space to run around.",
+  user_id: User.find_by username: "pip",
+  playspace_id: Playspace.find_by name: "mount austin playground"
+  rating: 5
+  )
+
+Review.create(comment: "We came here for the first time last week and the kids had a great time. We will be back.",
+  user_id: User.find_by username: "anna",
+  playspace_id: Playspace.find_by name: "quarry bay park"
+  rating: 4
+  )
+
+Review.create(comment: "This beach is fantastic!",
+  user_id: User.find_by username: "bob",
+  playspace_id: Playspace.find_by name: "repulse bay beach"
+  rating: 5
+  )
+
+Review.create(comment: "Beware of the dodgy men. STAY AWAY!",
+  user_id: User.find_by username: "cate",
+  playspace_id: Playspace.find_by name: "wan chai park"
+  rating: 1
+  )
