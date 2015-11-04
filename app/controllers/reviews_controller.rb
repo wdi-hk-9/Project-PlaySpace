@@ -14,10 +14,12 @@ class ReviewsController < ApplicationController
   def create
     @review = @playspace.reviews.new(reviews_params)
     @review.user = current_user
+    @review.rating = @review.rating.to_i
     if @review.save
       redirect_to playspace_reviews_path(@playspace.id)
     else
-      render :new
+      binding.pry
+      redirect_to playspace_reviews_path(@playspace.id)
     end
   end
 

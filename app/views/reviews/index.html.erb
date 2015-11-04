@@ -3,9 +3,7 @@
   <div class="row">
     <div class="col-xs-8">
       <div>
-        <% if @playspace.reviews.average(:rating) >= 0 %>
-          <%= render 'shared/rating' %>
-        <% end %>
+        <%= avg_rating(@playspace) %>
       </div>
       <div><strong><%= @playspace.name.titleize %></strong></div>
       <div><em><%= @playspace.district.titleize %>, <%= @playspace.region.upcase %></em></div>
@@ -16,7 +14,7 @@
     </div>
   </div>
 
-  <% if @current_user %>
+  <% if current_user %>
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-md-8">
         <%= render 'form' %>
@@ -24,7 +22,7 @@
     </div>
   <% else %>
     <div>
-      <h6><%= link_to 'Log in to add a review', login_path %></h6>
+      <h6><%= link_to 'Log in', login_path %> to add a review</h6>
     </div>
   <% end %>
 
