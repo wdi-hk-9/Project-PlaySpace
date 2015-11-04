@@ -30,8 +30,12 @@
     <div class="col-xs-12">
       <ul class="list-unstyled reviews">
         <% @reviews.each do |review| %>
-          <li class="comment"><p>"<%= review.comment %>"~ <em><%= review.user.username %></em>, <small><%= review.created_at.strftime("%d-%b-%Y") %></small></p>
-
+          <li class="stars">
+            <% review.rating.times do %>
+              <span class="glyphicon glyphicon-star yellow"></span>
+            <% end %>
+          </li>
+          <li class="comment"><p>"<%= review.comment %>" ~ <em><%= review.user.username %></em>, <small><%= review.created_at.strftime("%d-%b-%Y") %></small></p>
           </li>
         <% end %>
       </ul>
