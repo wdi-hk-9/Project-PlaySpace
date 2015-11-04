@@ -6,6 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.delete_all
+
+# ** Template for new user. NB: use lowercase)
+# User.create(email: "",
+#   username: "",
+#   password: ""
+# )
+
+User.create(email: "ada@ada.com",
+  username: "ada",
+  password: "123"
+)
+
+User.create(email: "pip@pip.com",
+  username: "pip",
+  password: "123"
+)
+
+User.create(email: "anna@anna.com",
+  username: "anna",
+  password: "123"
+)
+
 Category.delete_all
 
 %w(beach park playground).each {|category| Category.create name: category }
@@ -205,38 +228,22 @@ Playspace.create(name: "yuet wah street playground",
   category_id: Category.find_by(name: "playground")
 )
 
-User.delete_all
+Review.delete_all
 
-# ** Template for new user. NB: use lowercase)
-# User.create(email: "",
-#   username: ""
-#   )
+# ** Template for new review.)
+# Review.create(comment: "",
+#   user_id: User.all.sample(1).first.id,
+#   playspace_id: Playspace.find_by(name: "").id
+# )
 
-User.create(email: "ada@ada.com",
-  username: "ada"
-  )
+Review.create(comment: "This place is fantastic!",
+  user_id: User.all.sample(1).first.id,
+  playspace_id: Playspace.find_by(name: "hong kong park").id,
+  rating: 5
+)
 
-User.create(email: "pip@pip.com",
-  username: "pip"
-  )
-
-User.create(email: "anna@anna.com",
-  username: "anna"
-  )
-
-User.create(email: "bob@bob.com",
-  username: "bob"
-  )
-
-User.create(email: "cate@cate.com",
-  username: "cate"
-  )
-
-User.create(email: "doug@doug.com",
-  username: "doug"
-  )
-
-User.create(email: "ed@ed.com",
-  username: "ed"
-  )
-
+Review.create(comment: "So much open space. The kids loved it!",
+  user_id: User.all.sample(1).first.id,
+  playspace_id: Playspace.find_by(name: "mount austin playground").id,
+  rating: 5
+)
