@@ -15,7 +15,6 @@ class ReviewsController < ApplicationController
     @review = @playspace.reviews.new(reviews_params)
     @review.user = current_user
     @review.rating = @review.rating.to_i
-    binding.pry
     if @review.save
       redirect_to playspace_reviews_path(@playspace.id)
     else
