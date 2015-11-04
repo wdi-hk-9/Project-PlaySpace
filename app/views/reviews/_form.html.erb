@@ -1,8 +1,16 @@
 <%= bootstrap_form_for @review, url: playspace_reviews_path(@playspace.id) do |f| %>
-  <div>
-    <%= f.text_field :comment %>
+  <% if @review.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @review.errors.full_messages %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
-  <div>
-    <%= f.submit "Add Comment" %>
-  </div>
+  <% end %>
+
+  <%= f.text_field :comment %>
+  <%= f.submit "Add Comment" %>
+
 <% end %>

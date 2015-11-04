@@ -11,11 +11,13 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8">
-      <%= render 'form' %>
+  <% if @logged_in? %>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8">
+        <%= render 'form' %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="row">
     <div class="col-xs-12">

@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_playspace
+  before_action :authenticate, only: :create
 
   def index
     @reviews = @playspace.reviews
