@@ -17,19 +17,22 @@ $(document).ready(function(){
       $(formID + " #playspace_district").append("<option value>Select by district:</option>")
 
       if ($(formID + " #playspace_region").val() == "HK") {
-        for (var i = 0; i < option["HK"].length; i++) {
-          $(formID + " #playspace_district").append("<option value='"+option["HK"][i]+"'>"+option["HK"][i]+"</option>")
-        }
+        option["HK"].forEach(function(elem) {
+          option_html = "<option value='"+elem+"'>"+elem+"</option>";
+          $(formID + " #playspace_district").append(option_html)
+        })
       }
       else if ($(formID + " #playspace_region").val() == "Kln") {
-        for (var i = 0; i < option["Kln"].length; i++) {
-          $(formID + " #playspace_district").append("<option value='"+option["Kln"][i]+"'>"+option["Kln"][i]+"</option>")
-        }
+        option["Kln"].forEach(function(elem) {
+          option_html = "<option value='" + elem + "'>" + elem + "</option>";
+          $(formID + " #playspace_district").append(option_html)
+        })
       }
       else {
-        for (var i = 0; i < option["NT"].length; i++) {
-          $(formID + " #playspace_district").append("<option value='"+option["NT"][i]+"'>"+option["NT"][i]+"</option>")
-        }
+        option["NT"].forEach(function(elem) {
+          option_html = "<option value='" + elem + "'>" + elem + "</option>";
+          $(formID + " #playspace_district").append(option_html)
+        })
       }
 
     })

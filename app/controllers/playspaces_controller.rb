@@ -47,20 +47,20 @@ class PlayspacesController < ApplicationController
 
     if params[:playspace] != nil
       puts "started Filtering"
-      f_params = filter_params
-      name = f_params[:name] == nil || f_params[:name] == "" ? nil : f_params[:name].downcase
-      region = f_params[:region] == nil || f_params[:region] == ""  ? nil : f_params[:region].downcase
-      district = f_params[:district] == nil || f_params[:district] == ""  ? nil : f_params[:district].downcase
-      category_id = f_params[:category_id] == nil || f_params[:category_id] == ""  ? nil : f_params[:category_id].to_i
-      bike_path = f_params[:bike_path].to_b
-      merry_go_round = f_params[:merry_go_round].to_b
-      play_structure = f_params[:play_structure].to_b
-      seesaw = f_params[:seesaw].to_b
-      slide = f_params[:slide].to_b
-      swing = f_params[:swing].to_b
-      carpark = f_params[:carpark].to_b
-      snack_shop = f_params[:snack_shop].to_b
-      wc = f_params[:wc].to_b
+      f_params        = filter_params
+      name            = f_params[:name]         == nil || f_params[:name]         == "" ? nil : f_params[:name].downcase
+      region          = f_params[:region]       == nil || f_params[:region]       == "" ? nil : f_params[:region].downcase
+      district        = f_params[:district]     == nil || f_params[:district]     == "" ? nil : f_params[:district].downcase
+      category_id     = f_params[:category_id]  == nil || f_params[:category_id]  == "" ? nil : f_params[:category_id].to_i
+      bike_path       = f_params[:bike_path].to_b
+      merry_go_round  = f_params[:merry_go_round].to_b
+      play_structure  = f_params[:play_structure].to_b
+      seesaw          = f_params[:seesaw].to_b
+      slide           = f_params[:slide].to_b
+      swing           = f_params[:swing].to_b
+      carpark         = f_params[:carpark].to_b
+      snack_shop      = f_params[:snack_shop].to_b
+      wc              = f_params[:wc].to_b
 
       results = results.where("name LIKE ?", '%' + name +'%') if name != nil
       results = results.where(region: region)                 if region != nil
