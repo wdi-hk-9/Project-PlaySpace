@@ -7,6 +7,9 @@
         <ul class="list-unstyled list-inline">
           <% @playspaces.each do |playspace| %>
             <li class="col-xs-12 col-sm-4 col-md-3 add-padding">
+              <span>
+                <%= avg_rating(playspace) %>
+              </span>
               <span class="name"><%= link_to playspace.name, playspace_path(playspace) %></span>
               <br>
               <span class="district"><em><%= playspace.district %>, <%= playspace.region %></em></span>

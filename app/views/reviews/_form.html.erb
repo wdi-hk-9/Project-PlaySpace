@@ -11,6 +11,7 @@
   <% end %>
 
   <%= f.text_field :comment %>
-  <%= f.submit "Add Comment" %>
+  <%= f.select :rating, [1, 2, 3, 4, 5] %>
+  <%= f.submit %>
 
 <% end %>

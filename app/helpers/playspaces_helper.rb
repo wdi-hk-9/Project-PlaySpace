@@ -7,4 +7,15 @@ module PlayspacesHelper
     end
     array.to_sentence
   end
+
+  def avg_rating(playspace)
+    if playspace.reviews.count > 0 && playspace.reviews.average(:rating) >= 0
+      html = "<span>"
+      playspace.reviews.average(:rating).floor.times do
+        html += '<span class="glyphicon glyphicon-star yellow"></span>'
+      end
+      html += "</span>"
+      html
+    end
+  end
 end

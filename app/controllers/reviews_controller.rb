@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate, only: :create
 
   def index
-    @reviews = @playspace.reviews
+    @reviews = @playspace.reviews.reverse
     @review  = @playspace.reviews.new
   end
 

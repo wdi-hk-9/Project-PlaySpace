@@ -1,0 +1,6 @@
+<% rating = playspace.reviews.average(:rating) %>
+<span>
+  <% rating.floor.times do %>
+    <span class="glyphicon glyphicon-star yellow"></span>
+  <% end %>
+</span>
