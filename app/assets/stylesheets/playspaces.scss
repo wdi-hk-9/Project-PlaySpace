@@ -28,7 +28,8 @@
     padding-bottom: 10px;
   }
 
-  span.features-list {
-    font-size: 12px;
+  span.features-list > img {
+    height: 30px;
+    width: 30px;
   }
 }
