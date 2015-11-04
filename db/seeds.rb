@@ -33,3 +33,18 @@ playspace_list = [
 playspace_list.each do |name, address, district, region, bike_path, merry_go_round, play_structure, seesaw, slide, swing, carpark, snack_shop, wc, category_id|
   Playspace.create(name: name, address: address, district: district, region: region, bike_path: bike_path, merry_go_round:merry_go_round, play_structure: play_structure, seesaw: seesaw, slide: slide, swing: swing, carpark: carpark, snack_shop: snack_shop, wc: wc, category_id: category_id)
 end
+
+Review.delete_all
+
+review_list = [
+  ["This playground is awesome.", 2, 16],
+  ["So much to do here.", 1, 16],
+  ["One of the nicest parks in Hong Kong. Lots of open space to run around.", 2, 17],
+  ["We came here for the first time last week and the kids had a great time.", 1, 17],
+  ["This beach is fantastic.", 2, 22],
+  ["Beware of the dodgy men. STAY AWAY!", 2, 23]
+]
+
+review_list.each do |comment, user_id, playspace_id|
+  Review.create(comment: comment, user_id: user_id, playspace_id: playspace_id)
+end
