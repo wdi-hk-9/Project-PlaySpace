@@ -4,6 +4,11 @@ var PlayspaceSidebar = function () {
   $("#menu-toggle3").removeClass("hide");
 }
 
+var HideSearchToggle = function () {
+  $("button#menu-toggle2").addClass('hide');
+  $("button#menu-toggle3").addClass('hide');
+}
+
 $(document).ready(function(){
   var option = {
     HK: ["Central", "North Point", "Repulse Bay", "The Peak", "Wan Chai", "Western"],
