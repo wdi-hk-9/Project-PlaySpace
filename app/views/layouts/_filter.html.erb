@@ -1,56 +1,64 @@
-<%= form_tag(@playspace) do |f| %>
+<!-- Sidebar right -->
+<div id="sidebar-wrapper-right" class="hide">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">PlaySpace</li>
 
-  <div>
-    <%= f.label :region %>
-    <%= f.select(:region, ["HK", "Kln", "NT"]) %>
-  </div>
-  <div>
-    <%= f.label :district %>
-    <%= f.select(:district, []) %>
-  </div>
-  <div>
-    <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select') %>
-  </div>
-  <div>
-    <%= f.label :bike_path %>
-    <%= f.check_box :bike_path %>
-  </div>
-  <div>
-    <%= f.label :merry_go_round %>
-    <%= f.check_box :merry_go_round %>
-  </div>
-  <div>
-    <%= f.label :play_structure %>
-    <%= f.check_box :play_structure %>
-  </div>
-  <div>
-    <%= f.label :seesaw %>
-    <%= f.check_box :seesaw %>
-  </div>
-  <div>
-    <%= f.label :slide %>
-    <%= f.check_box :slide %>
-  </div>
-  <div>
-    <%= f.label :swing %>
-    <%= f.check_box :swing %>
-  </div>
-  <div>
-    <%= f.label :carpark %>
-    <%= f.check_box :carpark %>
-  </div>
-  <div>
-    <%= f.label :snack_shop %>
-    <%= f.check_box :snack_shop %>
-  </div>
-  <div>
-    <%= f.label :wc %>
-    <%= f.check_box :wc %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-
-<% end %>
-<!-- checkboxes, pull-down menus! -->
+    <div class="container">
+      <%= form_for :playspace, {url: "/playspaces", method: "get", html:{id: "search"}} do |f| %>
+        <div>
+          <label>Search for:</label>
+          <%= f.text_field :name %>
+        </div>
+        <div>
+          <%= f.select :region, ['HK','Kln','NT'], :prompt => 'Select by region:' %>
+        </div>
+        <div>
+          <%= f.select :district, [], :prompt => 'Select by district:'%>
+        </div>
+        <div>
+          <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => 'Select by category:' %>
+        </div>
+        <div>
+          <label>Search by feature:</label>
+          <div>
+            <label>bike path</label>
+            <%= f.check_box :bike_path, {}, true, false %>
+          <div>
+            <label>merry-go-round</label>
+            <%= f.check_box :merry_go_round, {}, true, false  %>
+          </div>
+          <div>
+            <label>play structure</label>
+            <%= f.check_box :play_structure, {}, true, false  %>
+          </div>
+          <div>
+            <label>seesaw</label>
+            <%= f.check_box :seesaw, {}, true, false  %>
+          </div>
+          <div>
+            <label>slide</label>
+            <%= f.check_box :slide, {}, true, false  %>
+          </div>
+          <div>
+            <label>swing</label>
+            <%= f.check_box :swing, {}, true, false  %>
+          </div>
+          <div>
+            <label>carpark</label>
+            <%= f.check_box :carpark, {}, true, false  %>
+          </div>
+          <div>
+            <label>snack shop</label>
+            <%= f.check_box :snack_shop, {}, true, false  %>
+          </div>
+          <div>
+            <label>toilet</label>
+            <%= f.check_box :wc, {}, true, false  %>
+          </div>
+        </div>
+        <%= submit_tag 'Search', class:"btn btn-default" %>
+      <% end %>
+    </div>
+  </ul>
+</div>
+<!-- /#sidebar-wrapper right-->
