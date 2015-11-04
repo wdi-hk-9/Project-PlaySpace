@@ -10,10 +10,6 @@ Category.delete_all
 
 %w(beach park playground).each {|category| Category.create name: category }
 
-categories.each do |category|
-  Category.create(name: category)
-end
-
 Playspace.delete_all
 
 # ** Template for new playspace. NB: use lowercase **
@@ -46,7 +42,7 @@ Playspace.create(name: "hong kong park",
   carpark: true,
   snack_shop: true,
   wc: true,
-  category_id: Category.find_by name: "park"
+  category_id: Category.find_by(name: "park")
 )
 
 Playspace.create(name: "mount austin playground",
@@ -62,7 +58,7 @@ Playspace.create(name: "mount austin playground",
   carpark: nil,
   snack_shop: nil,
   wc: true,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "sai on lane playground",
@@ -78,7 +74,7 @@ Playspace.create(name: "sai on lane playground",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "victoria park",
@@ -94,7 +90,7 @@ Playspace.create(name: "victoria park",
   carpark: true,
   snack_shop: true,
   wc: true,
-  category_id: Category.find_by name: "park"
+  category_id: Category.find_by(name: "park")
 )
 
 Playspace.create(name: "quarry bay park",
@@ -110,7 +106,7 @@ Playspace.create(name: "quarry bay park",
   carpark: nil,
   snack_shop: nil,
   wc: true,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "ap lei chau park",
@@ -126,7 +122,7 @@ Playspace.create(name: "ap lei chau park",
   carpark: nil,
   snack_shop: nil,
   wc: true,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "repulse bay beach",
@@ -142,7 +138,7 @@ Playspace.create(name: "repulse bay beach",
   carpark: true,
   snack_shop: true,
   wc: true,
-  category_id: Category.find_by name: "beach"
+  category_id: Category.find_by(name: "beach")
 )
 
 Playspace.create(name: "wan chai park",
@@ -158,7 +154,7 @@ Playspace.create(name: "wan chai park",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "ho man tin park",
@@ -174,7 +170,7 @@ Playspace.create(name: "ho man tin park",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "to kwa wan recreation ground",
@@ -190,7 +186,7 @@ Playspace.create(name: "to kwa wan recreation ground",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 Playspace.create(name: "yuet wah street playground",
@@ -206,7 +202,7 @@ Playspace.create(name: "yuet wah street playground",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category_id: Category.find_by name: "playground"
+  category_id: Category.find_by(name: "playground")
 )
 
 User.delete_all
