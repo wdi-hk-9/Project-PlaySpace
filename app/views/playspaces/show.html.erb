@@ -17,7 +17,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 features">
       <h6>Features</h6>
-      <span class="features-list"><%= features_list(@playspace) %></span>
+      <span class="features-list"><% features_list(@playspace) %>
+        <% @array.each do |image| %>
+          <%= image_tag(image) %>
+        <% end %>
+      </span>
     </div>
   </div>
 

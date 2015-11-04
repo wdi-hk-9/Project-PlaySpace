@@ -1,11 +1,19 @@
 module PlayspacesHelper
   def features_list(playspace)
-    @features = ["bike_path", "merry_go_round", "play_structure", "seesaw", "slide", "swing", "carpark", "snack_shop" "wc"]
-    array = []
-    @features.each do |feature|
-      array.push feature.titleize if playspace[feature]
+    @features = {
+      bike_path: "bike.png",
+      merry_go_round: "merrygoround.png",
+      play_structure: "playstructure.png",
+      seesaw: "seesaw.png",
+      slide: "slide.png",
+      swing: "swing.png",
+      carpark: "carpark.png",
+      snack_shop: "snack.png",
+      wc: "wc.png"
+    }
+    @array = []
+    @features.each do |feature, image|
+      @array.push image if playspace[feature]
     end
-    array.to_sentence
   end
-
 end
