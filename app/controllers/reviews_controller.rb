@@ -1,18 +1,15 @@
 class ReviewsController < ApplicationController
   before_action :set_playspace
 
-  #index
   def index
     @reviews = @playspace.reviews
     @review  = @playspace.reviews.new
   end
 
-  #new
-  def end
+  def new
     @review = @playspace.reviews.new
   end
 
-  #create
   def create
     @review = @playspace.reviews.new(reviews_params)
     @review.user = current_user
@@ -23,12 +20,10 @@ class ReviewsController < ApplicationController
     end
   end
 
-  #edit
   def edit
     @review = @playspace.review.find(reviews_params)
   end
 
-  #update
   def update
     @revew = @playspace.review.find(reviews_params)
     if @review.update

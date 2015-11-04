@@ -12,14 +12,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 features">
-      <h6>Features</h6>
-      <span class="features-list"><%= features_list(@playspace) %></span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 features">
+    <div class="col-xs-12 col-sm-10 col-md-8">
       <%= render 'form' %>
     </div>
   </div>
@@ -27,8 +20,8 @@
   <div class="row">
     <div class="col-xs-12">
       <ul class="list-unstyled reviews">
-        <% @playspace.reviews.reverse_each do |review| %>
-          <li class="comment"><p>"<%= review.comment %>" ~ <em><%= review.user.username %></em></p></li>
+        <% @reviews.reverse_each do |review| %>
+          <li class="comment"><p>"<%= review.comment %>"~ <em><%= review.user.username %></em></p></li>
         <% end %>
       </ul>
     </div>
