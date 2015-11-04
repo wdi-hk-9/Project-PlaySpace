@@ -31,7 +31,7 @@ User.create(email: "anna@anna.com",
 
 Category.delete_all
 
-%w(beach park playground).each {|category| Category.create name: category }
+%w(beach park playground).each {|category| Category.create(name: category) }
 
 Playspace.delete_all
 
@@ -98,6 +98,7 @@ Playspace.create(name: "sai on lane playground",
   snack_shop: nil,
   wc: nil,
   category: Category.find_by(name: "playground")
+
 )
 
 Playspace.create(name: "victoria park",
