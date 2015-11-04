@@ -7,7 +7,7 @@ var PlayspaceSidebar = function () {
 $(document).ready(function(){
   var option = {
     HK: ["Central", "North Point", "Repulse Bay", "The Peak", "Wan Chai", "Western"],
-    Kln: ["Ho Man Tin", "Tsim Sha Tsui", "Wong Tai Sin"],
+    KLN: ["Ho Man Tin", "Tsim Sha Tsui", "Wong Tai Sin"],
     NT: ["Sai Kung", "Sha Tin", "Tai Po"]
   }
 

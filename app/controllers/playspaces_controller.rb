@@ -11,6 +11,8 @@ class PlayspacesController < ApplicationController
 
   def show
     @playspace = Playspace.find(params[:id])
+    @features = ["bike_path", "merry_go_round", "play_structure", "seesaw", "slide", "swing", "carpark", "snack_shop" "wc"]
+
   end
 
   def new
