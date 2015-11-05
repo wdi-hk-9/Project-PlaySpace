@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   resources :playspaces, only: [:index, :show, :new, :create] do
     resources :reviews, only: [:new, :index, :create]
   end
+
+  resources :bookmarks, only: [:index, :create, :destroy]
 end
 
