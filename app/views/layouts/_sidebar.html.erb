@@ -1,17 +1,17 @@
 <!-- Sidebar left -->
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
-    <li class="sidebar-brand">PlaySpace</li>
-    <li><a href="/playspaces">Find a PlaySpace</a></li>
-    <li><%= link_to 'About', about_path %></li>
+    <li class="sidebar-brand"></li>
+    <li class=""><a href="/playspaces"><h4>Find a Play Space</h4></a></li>
+    <li><h4><%= link_to 'About', about_path %></h4></li>
 
-      <% if current_user %>
-        <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-        <li><%= link_to 'Add a Playspace', new_playspace_path %></li>
-      <% else %>
-        <li><%= link_to 'Sign up', new_user_path %></li>
-        <li><%= link_to 'Login', login_path %></li>
-      <% end %>
+    <% if current_user %>
+      <li><h4><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></h4></li>
+      <li><h4><%= link_to 'Add a Playspace', new_playspace_path %></h4></li>
+    <% else %>
+      <li><h4><%= link_to 'Sign up', new_user_path %></h4></li>
+      <li><h4><%= link_to 'Login', login_path %></h4></li>
+    <% end %>
   </ul>
 </div>
 <!-- /#sidebar-wrapper left-->

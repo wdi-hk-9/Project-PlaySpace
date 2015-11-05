@@ -1,21 +1,12 @@
 <header class="header">
-  <div class="text-vertical-center">
-    <h1></h1>
-    <h3></h3>
-    <br>
+  <!-- background image goes in here. see static_pages.scss -->
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-heading">Find your next PLAY SPACE</div>
+      <%= link_to "GO!", playspaces_path, class: "page-scroll btn btn-xl" %>
+    </div>
   </div>
+
 </header>
-
-
-<div class="col-xs-12 text-center" id="landing-center">
-<br>
-  <%= link_to "Find a PlaySpace", playspaces_path, class: "btn btn-primary btn-find" %>
-
-  <h6>OR</h6>
-
-  <%= link_to "Sign Up", new_user_path, class: "btn btn-default" %>
-  <%= link_to "Log In", login_path, class: "btn btn-success" %>
-
-</div>
 
 <script>HideSearchToggle()</script>

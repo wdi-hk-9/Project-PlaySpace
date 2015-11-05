@@ -24,9 +24,13 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
   font-weight: bold;
+}
+
+h4 {
+  font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
 }
 
 h5 {
@@ -76,7 +80,7 @@ h6 {
     h1 {font-size: ($font-size-base * 2.6);}
     h2 {font-size: ($font-size-base * 2);}
     h3 {font-size: ($font-size-base * 1.7);}
-    h4 {font-size: ($font-size-base * 1.4);}
+    h4 {font-size: ($font-size-base * 1.2);}
     h5 {font-size: ($font-size-base * 1.4);}
     h6 {font-size: ($font-size-base * .85);}
     p {font-size: ($font-size-base * 1);}
@@ -88,7 +92,7 @@ h6 {
     h1{font-size: ($font-size-base * 3.4);}
     h2{font-size: ($font-size-base * 2.4);}
     h3{font-size: ($font-size-base * 1.85);}
-    h4{font-size: ($font-size-base * 1.4);}
+    h4{font-size: ($font-size-base * 1.2);}
     h5{font-size: ($font-size-base * 1.4);}
     h6{font-size: ($font-size-base * .85);}
     p{font-size: ($font-size-base * 1.15);}
@@ -100,7 +104,7 @@ h6 {
     h1{font-size: ($font-size-base * 4.6);}
     h2{font-size: ($font-size-base * 2.6);}
     h3{font-size: ($font-size-base * 2);}
-    h4{font-size: ($font-size-base * 1.7);}
+    h4{font-size: ($font-size-base * 1.5);}
     h5{font-size: ($font-size-base * 1.7);}
     h6{font-size: ($font-size-base * 0.9);}
     p{font-size: ($font-size-base * 1.15);}
@@ -114,5 +118,3 @@ h6 {
 .yellow {
   color: #FFFF00;
 }
-
-
