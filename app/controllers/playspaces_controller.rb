@@ -34,7 +34,7 @@ class PlayspacesController < ApplicationController
   end
 
   def playspaces_params
-    params.require(:playspace).permit(:name, :address, :district, :region, :bike_path, :merry_go_round, :play_structure, :seesaw, :slide, :swing, :carpark, :snack_shop, :wc, :category_id)
+    params.require(:playspace).permit(:name, :address, :district, :region, :bike_path, :merry_go_round, :play_structure, :seesaw, :slide, :swing, :carpark, :snack_shop, :wc, :category_id, :photo)
   end
 
   def filter_params

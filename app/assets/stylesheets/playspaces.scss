@@ -17,9 +17,14 @@
   }
 
   div > img {
-    height: 100px;
+    height: auto;
     width: 100%;
+    border-radius: 5px;
+    background-position: center;
+  }
 
+  .floated_img {
+    float: left;
   }
 }
 
