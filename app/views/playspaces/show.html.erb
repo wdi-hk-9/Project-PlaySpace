@@ -3,6 +3,9 @@
   <div class="row">
     <div class="col-xs-6 col-sm-4">
       <div>
+        <%= image_tag @playspace.photo.url %>
+      </div>
+      <div>
         <%= avg_rating(@playspace) %>
       </div>
       <div><strong><%= @playspace.name.titleize %></strong></div>
