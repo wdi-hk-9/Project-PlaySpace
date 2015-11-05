@@ -8,7 +8,7 @@
 
 User.delete_all
 
-# ** Template for new user. NB: use lowercase)
+# ** Template for new user. NB: use lowercase
 # User.create(email: "",
 #   username: "",
 #   password: ""
@@ -31,26 +31,9 @@ User.create(email: "anna@anna.com",
 
 Category.delete_all
 
-%w(beach park playground).each {|category| Category.create name: category }
+%w(beach park playground).each {|category| Category.create(name: category) }
 
 Playspace.delete_all
-
-# ** Template for new playspace. NB: use lowercase **
-# Playspace.create(name: "",
-#   address: "",
-#   district: "",
-#   region: "",
-#   bike_path: ,
-#   merry_go_round: ,
-#   play_structure: ,
-#   seesaw: ,
-#   slide: ,
-#   swing: ,
-#   carpark: ,
-#   snack_shop: ,
-#   wc: ,
-#   category: Category.find_by(name: "")
-# )
 
 Playspace.create(name: "hong kong park",
   address: "19 cotton tree drive",
@@ -227,6 +210,167 @@ Playspace.create(name: "yuet wah street playground",
   wc: nil,
   category: Category.find_by(name: "playground")
 )
+
+Playspace.create(name: "lai chi kok park",
+  address: "1 lai wan road",
+  district: "lai chi kok",
+  region: "kln",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category: Category.find_by(name: "playground")
+)
+
+Playspace.create(name: "nam cheong park",
+  address: "20 sham mong road",
+  district: "mong kok",
+  region: "kln",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category: Category.find_by(name: "playground")
+)
+
+Playspace.create(name: "po hong park",
+  address: "wan lung road",
+  district: "tseung kwan o",
+  region: "nt",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: nil,
+  snack_shop: nil,
+  wc: nil,
+  category: Category.find_by(name: "playground")
+)
+
+Playspace.create(name: "sai kung waterfront park",
+  address: "wai man road",
+  district: "sai kung",
+  region: "nt",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: true,
+  wc: true,
+  category: Category.find_by(name: "park")
+)
+
+Playspace.create(name: "sheung ning playground",
+  address: "sheung ning road",
+  district: "tseung kwan o",
+  region: "nt",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: true,
+  wc: true,
+  category: Category.find_by(name: "playground")
+)
+
+Playspace.create(name: "tai po waterfront park",
+  address: "dai fat street",
+  district: "tai po",
+  region: "nt",
+  bike_path: true,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: true,
+  snack_shop: true,
+  wc: true,
+  category: Category.find_by(name: "park")
+)
+
+Playspace.create(name: "sha tin park",
+  address: "2 yuen wo road",
+  district: "sha tin",
+  region: "nt",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: true,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: nil,
+  wc: true,
+  category: Category.find_by(name: "playground")
+)
+
+Playspace.create(name: "ma on shan park",
+  address: "12 on chun street",
+  district: "ma on shan",
+  region: "nt",
+  bike_path: nil,
+  merry_go_round: true,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: nil,
+  carpark: nil,
+  snack_shop: nil,
+  wc: true,
+  category: Category.find_by(name: "")
+)
+
+Playspace.create(name: "man tung road park",
+  address: "55 man tung road",
+  district: "tung chung",
+  region: "nt",
+  bike_path: nil,
+  merry_go_round: nil,
+  play_structure: true,
+  seesaw: nil,
+  slide: true,
+  swing: true,
+  carpark: true,
+  snack_shop: nil,
+  wc: nil,
+  category: Category.find_by(name: "playground")
+)
+
+# ** Template for new playspace. NB: use lowercase **
+# Playspace.create(name: "",
+#   address: "",
+#   district: "",
+#   region: "",
+#   bike_path: ,
+#   merry_go_round: ,
+#   play_structure: ,
+#   seesaw: ,
+#   slide: ,
+#   swing: ,
+#   carpark: ,
+#   snack_shop: ,
+#   wc: ,
+#   category: Category.find_by(name: "")
+# )
 
 Review.delete_all
 
