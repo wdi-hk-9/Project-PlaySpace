@@ -2,7 +2,8 @@
 header.header {
   text-align: center;
   color: #fff;
-  background: url(playground.jpeg) no-repeat center center scroll;
+  // background: url(playground.jpeg) no-repeat center center scroll;
+  background: image-url("playground.jpeg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   background-attachment: scroll;
   background-position: center center;
   background-repeat: none;
