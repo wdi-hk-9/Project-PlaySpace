@@ -10,6 +10,12 @@
           <% else %>
             <% @playspaces.each do |playspace| %>
               <li class="col-xs-12 col-sm-4 col-md-3 add-padding">
+                <div>
+                  <%= image_tag(playspace.photo_file) %>
+                </div>
+                <span>
+                  <%= avg_rating(playspace) %>
+                </span>
                 <span class="name"><%= link_to playspace.name.titleize, playspace_path(playspace) %></span>
                 <br>
                 <span class="district"><em><%= playspace.district.titleize %>, <%= playspace.region.titleize %></em></span>

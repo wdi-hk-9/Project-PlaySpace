@@ -15,6 +15,12 @@
   span.district {
     font-size: 12px;
   }
+
+  div > img {
+    height: 100px;
+    width: 100%;
+
+  }
 }
 
 // #show
@@ -32,4 +38,5 @@
     height: 30px;
     width: 30px;
   }
+
 }
