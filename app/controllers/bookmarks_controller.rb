@@ -7,14 +7,13 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    playspace_id = params[:bookmark][:playspace_id].to_i
     @bookmark = current_user.bookmarks.new
-    @bookmark.user_id = current_user.id
-    @bookmark.playspace_id = playspace_id
+    @bookmark.user = current_user
+    @bookmark.playspace = Playspace.find(params[:bookmark][:playspace_id])
     if @bookmark.save
       redirect_to bookmarks_path
     else
-      redirect_to playspace_path(playspace_id)
+      redirect_to playspace_path(params[:bookmark][:playspace_id])
     end
   end
 
