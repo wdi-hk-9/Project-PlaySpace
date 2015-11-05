@@ -3,6 +3,7 @@ gem 'rails', '4.2.4'
 gem 'pg'
 gem 'bcrypt', '~> 3.1.2'
 gem 'jbuilder', '~> 2.0'
+gem 'aws-sdk'
 
 # Assets
 gem 'jquery-rails'
@@ -19,6 +20,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'pry-rails'
   gem 'binding_of_caller'
+  gem 'dotenv-rails'
 end
 
 group :development do

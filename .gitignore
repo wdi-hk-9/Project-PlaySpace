@@ -14,5 +14,5 @@
 /tmp
 /tmp/
 /public/system/
-
+.env
 .DS_Store
