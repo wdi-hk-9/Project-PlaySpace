@@ -10,4 +10,8 @@ module ApplicationHelper
       html.html_safe
     end
   end
+
+  def heroku_image_path(path)
+    "https://playspaces-wdi.s3.amazonaws.com#{path}"
+  end
 end

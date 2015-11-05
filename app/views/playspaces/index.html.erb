@@ -11,7 +11,7 @@
             <% @playspaces.each do |playspace| %>
               <li class="col-xs-6 col-lg-3 add-padding pull-left">
                 <div>
-                  <%= image_tag playspace.photo.url %>
+                  <%= image_tag heroku_image_path(playspace.photo.path) %>
                 </div>
                 <span>
                   <%= avg_rating(playspace) %>
