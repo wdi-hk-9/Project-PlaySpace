@@ -49,7 +49,7 @@ Playspace.create(name: "hong kong park",
   snack_shop: true,
   wc: true,
   category: Category.find_by(name: "park"),
-  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'hkpark1.jpg')}")
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'hk_park.jpg')}")
 )
 
 Playspace.create(name: "mount austin playground",
@@ -189,7 +189,7 @@ Playspace.create(name: "ho man tin park",
   snack_shop: nil,
   wc: nil,
   category: Category.find_by(name: "playground"),
-  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'hkpark1.jpg')}")
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'hk_park.jpg')}")
 
 )
 

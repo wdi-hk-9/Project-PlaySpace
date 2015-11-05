@@ -18,7 +18,7 @@
                 </span>
                 <span class="name"><%= link_to playspace.name.titleize, playspace_path(playspace) %></span>
                 <br>
-                <span class="district"><em><%= playspace.district.titleize %>, <%= playspace.region.titleize %></em></span>
+                <span class="district"><em><%= playspace.district.titleize %>, <%= playspace.region.upcase %></em></span>
               </li>
             <% end %>
           <% end %>
