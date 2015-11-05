@@ -10,16 +10,18 @@
           <% else %>
             <% @playspaces.each do |playspace| %>
               <li class="col-xs-6 col-lg-3 add-padding pull-left">
-                <div>
+                <div class="playspace-photo">
                   <%= image_tag heroku_image_path(playspace.photo.path) %>
                 </div>
-                <span>
-                  <%= avg_rating(playspace) %>
-                </span>
-                <br>
-                <span class="name"><%= link_to playspace.name.titleize, playspace_path(playspace) %></span>
-                <br>
-                <span class="district"><em><%= playspace.district.titleize %>, <%= playspace.region.upcase %></em></span>
+                <div class="playspace-detail">
+                  <span>
+                    <%= avg_rating(playspace) %>
+                  </span>
+                  <br>
+                  <span class="name"><%= link_to playspace.name.titleize, playspace_path(playspace) %></span>
+                  <br>
+                  <span class="district"><em><%= playspace.district.titleize %>, <%= playspace.region.upcase %></em></span>
+                </div>
               </li>
             <% end %>
           <% end %>
