@@ -3,21 +3,26 @@
   <ul class="sidebar-nav">
     <li class="sidebar-brand">PlaySpace</li>
 
-    <div class="container">
+    <div class="container col-xs-12">
       <%= form_for :playspace, {url: "/playspaces", method: "get", html:{id: "search"}} do |f| %>
         <div>
-          <label>Search for:</label>
+          <br>
+          <label>Search by name:</label>
           <%= f.text_field :name %>
         </div>
+        <br>
         <div>
           <%= f.select :region, ['HK','Kln','NT'], :prompt => 'Select by region:' %>
         </div>
+        <br>
         <div>
           <%= f.select :district, [], :prompt => 'Select by district:'%>
         </div>
+        <br>
         <div>
           <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => 'Select by category:' %>
         </div>
+        <br>
         <div>
           <label>Search by feature:</label>
           <div>
@@ -55,8 +60,9 @@
             <label>toilet</label>
             <%= f.check_box :wc, {}, true, false  %>
           </div>
+          <br>
         </div>
-        <%= submit_tag 'Search', class:"btn btn-default" %>
+        <%= submit_tag 'Search', class:"btn btn-success btn-block no-margin" %>
       <% end %>
     </div>
   </ul>

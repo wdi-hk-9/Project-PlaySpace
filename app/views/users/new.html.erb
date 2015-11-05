@@ -15,8 +15,9 @@
     <%= f.text_field :username, icon: "user" %>
     <%= f.email_field :email, icon: "envelope" %>
     <%= f.password_field :password, icon: "asterisk" %>
-    <%= f.password_field :password_confirmation, icon: "asterisk" %>
-    <%= f.submit "Submit", class: "btn btn-success" %>
-
+    <%= f.password_field :password_confirmation, label: "Retype Password", icon: "asterisk" %>
+    <%= f.submit "Submit", class: "btn btn-success btn-block no-margin" %>
   <% end %>
 </div>
+
+<script>HideSearchToggle()</script>

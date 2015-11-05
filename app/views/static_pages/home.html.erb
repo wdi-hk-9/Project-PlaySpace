@@ -1,13 +1,21 @@
-<div class="row">
-  <div class="static-header col-xs-12">
+<header class="header">
+  <div class="text-vertical-center">
+    <h1></h1>
+    <h3></h3>
+    <br>
   </div>
-</div>
+</header>
+
 
 <div class="col-xs-12 text-center" id="landing-center">
-  <!-- <div class="text-center"> -->
+<br>
   <%= link_to "Find a PlaySpace", playspaces_path, class: "btn btn-primary btn-find" %>
-  <!-- </div> -->
+
   <h6>OR</h6>
+
   <%= link_to "Sign Up", new_user_path, class: "btn btn-default" %>
   <%= link_to "Log In", login_path, class: "btn btn-success" %>
+
 </div>
+
+<script>HideSearchToggle()</script>
