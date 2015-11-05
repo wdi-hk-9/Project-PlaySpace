@@ -1,7 +1,7 @@
 <div class="container top-margin" id="reviews-index">
 
   <div class="row">
-    <div class="col-xs-8">
+    <div class="col-xs-6 col-sm-4">
       <div>
         <%= avg_rating(@playspace) %>
       </div>
@@ -9,7 +9,7 @@
       <div><em><%= @playspace.district.titleize %>, <%= @playspace.region.upcase %></em></div>
       <div class="playspace-address">Address: <%= @playspace.address.titleize %></div>
     </div>
-    <div class="col-xs-4">
+    <div class="col-xs-4 col-sm-4">
       <%= link_to 'Back', playspace_path(@playspace.id), class: "btn btn-default" %>
     </div>
   </div>
