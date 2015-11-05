@@ -1,5 +1,5 @@
 <div class="top-margin" id="playspaces-index">
-  <h1><%= @category.name.capitalize if @category %> Playspaces</h1>
+  <h2><%= @category.name.capitalize if @category %> Playspaces</h2>
 
   <div class="container-fluid">
     <div class="row">
@@ -16,6 +16,7 @@
                 <span>
                   <%= avg_rating(playspace) %>
                 </span>
+                <br>
                 <span class="name"><%= link_to playspace.name.titleize, playspace_path(playspace) %></span>
                 <br>
                 <span class="district"><em><%= playspace.district.titleize %>, <%= playspace.region.upcase %></em></span>
