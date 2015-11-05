@@ -35,7 +35,11 @@
               <span class="glyphicon glyphicon-star yellow"></span>
             <% end %>
           </li>
-          <li class="comment"><p>"<%= review.comment %>" ~ <em><%= review.user.username %></em>, <small><%= review.created_at.strftime("%d-%b-%Y") %></small></p>
+          <li class="comment">
+            <p>
+              <%= image_tag review.photo.url %>
+              "<%= review.comment %>" ~ <em><%= review.user.username %></em>, <small><%= review.created_at.strftime("%d-%b-%Y") %></small>
+            </p>
           </li>
         <% end %>
       </ul>

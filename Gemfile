@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'wannabe_bool'
+gem "paperclip", "~> 4.3"
 
 group :development, :test do
   gem 'better_errors'

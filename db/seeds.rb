@@ -48,7 +48,8 @@ Playspace.create(name: "hong kong park",
   carpark: true,
   snack_shop: true,
   wc: true,
-  category: Category.find_by(name: "park")
+  category: Category.find_by(name: "park"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'hkpark1.jpg')}")
 )
 
 Playspace.create(name: "mount austin playground",
@@ -64,7 +65,8 @@ Playspace.create(name: "mount austin playground",
   carpark: nil,
   snack_shop: nil,
   wc: true,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'mt_austin2.jpg')}")
 )
 
 Playspace.create(name: "sai on lane playground",
@@ -80,7 +82,8 @@ Playspace.create(name: "sai on lane playground",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'sai_on_lane1.jpg')}")
 )
 
 Playspace.create(name: "victoria park",
@@ -96,7 +99,8 @@ Playspace.create(name: "victoria park",
   carpark: true,
   snack_shop: true,
   wc: true,
-  category: Category.find_by(name: "park")
+  category: Category.find_by(name: "park"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'victoria_park1.jpg')}")
 )
 
 Playspace.create(name: "quarry bay park",
@@ -112,7 +116,9 @@ Playspace.create(name: "quarry bay park",
   carpark: nil,
   snack_shop: nil,
   wc: true,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'quarry_bay_park.jpg')}")
+
 )
 
 Playspace.create(name: "ap lei chau park",
@@ -128,7 +134,9 @@ Playspace.create(name: "ap lei chau park",
   carpark: nil,
   snack_shop: nil,
   wc: true,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'ap_lei_chau_park.jpg')}")
+
 )
 
 Playspace.create(name: "repulse bay beach",
@@ -144,7 +152,9 @@ Playspace.create(name: "repulse bay beach",
   carpark: true,
   snack_shop: true,
   wc: true,
-  category: Category.find_by(name: "beach")
+  category: Category.find_by(name: "beach"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'repulse_bay2.jpg')}")
+
 )
 
 Playspace.create(name: "wan chai park",
@@ -160,7 +170,9 @@ Playspace.create(name: "wan chai park",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'wan_chai2.jpg')}")
+
 )
 
 Playspace.create(name: "ho man tin park",
@@ -176,7 +188,9 @@ Playspace.create(name: "ho man tin park",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'hkpark1.jpg')}")
+
 )
 
 Playspace.create(name: "to kwa wan recreation ground",
@@ -192,7 +206,9 @@ Playspace.create(name: "to kwa wan recreation ground",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'to_kwa_wan1.jpg')}")
+
 )
 
 Playspace.create(name: "yuet wah street playground",
@@ -208,7 +224,9 @@ Playspace.create(name: "yuet wah street playground",
   carpark: nil,
   snack_shop: nil,
   wc: nil,
-  category: Category.find_by(name: "playground")
+  category: Category.find_by(name: "playground"),
+  photo: File.open("#{Rails.root.join('app', 'assets', 'images', 'yuet_wah2.jpg')}")
+
 )
 
 Playspace.create(name: "lai chi kok park",
