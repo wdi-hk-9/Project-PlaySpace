@@ -12,6 +12,10 @@ module ApplicationHelper
   end
 
   def heroku_image_path(path)
-    "https://playspaces-wdi.s3.amazonaws.com#{path}"
+    if !path.blank?
+      "https://playspaces-wdi.s3.amazonaws.com#{path}"
+    else
+      "https://s3-ap-northeast-1.amazonaws.com/playspaces-wdi/playspaces/DSC_0028.JPG"
+    end
   end
 end
