@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-gem 'rails', '4.2.4'
-gem 'pg'
+gem 'rails', '~> 4.2'
+gem 'pg', '~> 0.15'
 gem 'bcrypt', '~> 3.1.2'
 gem 'jbuilder', '~> 2.0'
 gem 'aws-sdk', '< 2.0'
